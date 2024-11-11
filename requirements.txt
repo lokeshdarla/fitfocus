@@ -7,3 +7,5 @@ scipy
 fastapi 
 uvicorn 
 jinja2
+db-sqlite3c
+python-multipart

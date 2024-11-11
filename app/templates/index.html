@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Data Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+    <h1 class="text-2xl font-bold mb-6 text-center">Enter Health Data</h1>
+    <form action="/submit/" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div>
+        <label for="Gender" class="block text-sm font-medium text-gray-700">Gender:</label>
+        <select id="Gender" name="Gender" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="Age" class="block text-sm font-medium text-gray-700">Age:</label>
+        <input type="number" id="Age" name="Age" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="Occupation" class="block text-sm font-medium text-gray-700">Occupation:</label>
+        <select id="Occupation" name="Occupation" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <option value="">Select Occupation</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Sales Representative">Sales Representative</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Nurse">Nurse</option>
+          <option value="Engineer">Engineer</option>
+          <option value="Accountant">Accountant</option>
+          <option value="Scientist">Scientist</option>
+          <option value="Lawyer">Lawyer</option>
+          <option value="Salesperson">Salesperson</option>
+          <option value="Manager">Manager</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="Sleep_Duration" class="block text-sm font-medium text-gray-700">Sleep Duration (hours):</label>
+        <input type="number" id="Sleep_Duration" name="Sleep_Duration" step="any" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="QualityOfSleep" class="block text-sm font-medium text-gray-700">Quality of Sleep (1-10):</label>
+        <input type="number" id="QualityOfSleep" name="QualityOfSleep" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="PhysicalActivityLevel" class="block text-sm font-medium text-gray-700">Physical Activity Level
+          (1-10):</label>
+        <input type="number" id="PhysicalActivityLevel" name="PhysicalActivityLevel" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="StressLevel" class="block text-sm font-medium text-gray-700">Stress Level (1-10):</label>
+        <input type="number" id="StressLevel" name="StressLevel" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="BMI_Category" class="block text-sm font-medium text-gray-700">BMI Category:</label>
+        <select id="BMI_Category" name="BMI_Category" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <option value="">Select BMI Category</option>
+          <option value="Overweight">Overweight</option>
+          <option value="Normal">Normal</option>
+          <option value="Obese">Obese</option>
+          <option value="Normal Weight">Normal Weight</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="BloodPressure" class="block text-sm font-medium text-gray-700">Blood Pressure
+          (Systolic/Diastolic):</label>
+        <input type="text" id="BloodPressure" name="BloodPressure" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="HeartRate" class="block text-sm font-medium text-gray-700">Heart Rate:</label>
+        <input type="number" id="HeartRate" name="HeartRate" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label for="DailySteps" class="block text-sm font-medium text-gray-700">Daily Steps:</label>
+        <input type="number" id="DailySteps" name="DailySteps" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+
+      <div class="md:col-span-2">
+        <input type="submit" value="Submit"
+          class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

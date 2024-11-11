@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+    <h1 class="text-2xl font-bold mb-4 text-center">Health Data Prediction Result</h1>
+
+    <div class="mb-4">
+      <h2 class="text-lg font-semibold mb-2">Input Data</h2>
+      <table class="w-full border border-gray-200 rounded-md">
+        <tbody>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Gender</td>
+            <td class="p-2">{{ data.Gender }}</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Age</td>
+            <td class="p-2">{{ data.Age }}</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Occupation</td>
+            <td class="p-2">{{ data.Occupation }}</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Sleep Duration</td>
+            <td class="p-2">{{ data.Sleep_Duration }} hours</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Quality of Sleep</td>
+            <td class="p-2">{{ data.QualityOfSleep }}/10</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Physical Activity Level</td>
+            <td class="p-2">{{ data.PhysicalActivityLevel }}/10</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Stress Level</td>
+            <td class="p-2">{{ data.StressLevel }}/10</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">BMI Category</td>
+            <td class="p-2">{{ data.BMICategory }}</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Blood Pressure</td>
+            <td class="p-2">{{ data.BloodPressure }}</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Heart Rate</td>
+            <td class="p-2">{{ data.HeartRate }} bpm</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2 font-semibold">Daily Steps</td>
+            <td class="p-2">{{ data.DailySteps }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 p-4 bg-indigo-100 rounded-md text-center">
+      <h2 class="text-lg font-semibold">Predicted Sleep Disorder</h2>
+      <p class="text-2xl font-bold">{{ data.SleepDisorder }}</p>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href="/" class="text-indigo-600 underline">Back to Form</a>
+    </div>
+  </div>
+</body>
+
+</html>
